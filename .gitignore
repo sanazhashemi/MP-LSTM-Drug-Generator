@@ -173,3 +173,5 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+generated_smiles_with_MP-LSTM.csv
