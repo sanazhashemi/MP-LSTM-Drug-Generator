@@ -3,7 +3,7 @@ import pandas as pd
 from rdkit import Chem
 from model import build_mp_lstm
 
-filename = "/Users/sanaz/Documents/paper/codes/Rev1-Com3/valid_smiles.csv"
+filename = "valid_smiles.csv"
 names = ['smiles', 'name']
 data_df = pd.read_csv(filename, names=names)
 smile = '\n'.join(data_df['smiles'].tolist())
