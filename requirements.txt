@@ -4,7 +4,6 @@ rdkit
 scikit-learn
 tensorflow-macos
 transformers
-tqdm
 matplotlib
 seaborn
 jupyter
