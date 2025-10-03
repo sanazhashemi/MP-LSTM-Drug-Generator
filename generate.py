@@ -20,7 +20,7 @@ for i in range(len(smile) - sequence_length):
     seq_in = smile[i:i+sequence_length]
     X.append([char_to_int[char] for char in seq_in])
 
-# بارگذاری مدل و وزن‌ها
+
 input_shape = (sequence_length, 1)
 output_dim = number_vocabulary
 
@@ -28,7 +28,6 @@ model = build_mp_lstm(input_shape, output_dim)
 model.load_weights("best-weights-8-1.23.keras")
 model.compile(loss='categorical_crossentropy', optimizer='adam')
 
-# انتخاب تصادفی یک دنباله اولیه
 startIndex = np.random.randint(0, len(X) - 1)
 Seq = X[startIndex].copy()
 
@@ -60,13 +59,12 @@ for _ in range(5000):
         mol = Chem.MolFromSmiles(generated.strip())
         is_valid = mol is not None and generated.strip() not in generated_smiles
         if is_valid:
-            print(f"\n✅ مولکول معتبر: {generated.strip()}")
+            print(f"\n Valid molecule: {generated.strip()}")
             generated_smiles.add(generated.strip())
         else:
-            print(f"\n❌ مولکول نامعتبر: {generated.strip()}")
+            print(f"\n Invalid molecule: {generated.strip()}")
         all_smiles.append({'smiles': generated.strip(), 'is_valid': is_valid})
         generated = ""
 
 df = pd.DataFrame(all_smiles)
 df.to_csv('generated_smiles_with_MP-LSTM.csv', index=False)
-print("خروجی‌ها در فایل 'generated_smiles_with_MP-LSTM.csv' ذخیره شدند.")
