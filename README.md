@@ -12,21 +12,40 @@ The model is trained on a dataset of known molecules and is capable of generatin
 
 ## 🚀 How to Use
 
-1. Clone the repository:
+### 1. Clone the repository
 
-   git clone https://github.com/sanazhashemi/MP-LSTM-Drug-Generator.git
-   cd MP-LSTM-Drug-Generator
-   
+```bash
+git clone https://github.com/sanazhashemi/MP-LSTM-Drug-Generator.git
+cd MP-LSTM-Drug-Generator
+```
 
-2. Create a Python virtual environment (Python 3.8 or higher recommended) and install dependencies:
-    
-    python3 -m venv venv
-    source venv/bin/activate  # On Windows: venv\Scripts\activate
-    pip install -r requirements.txt
-    
-    
-3. Run the molecule generation script:
-    python generate.py
+### 2. Install dependencies
+
+Python 3.10 is recommended.
+
+```bash
+python3.10 -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+### 3. Generate molecules
+
+The required input file (`valid_smiles.csv`) and trained model weights are included in the repository.
+
+Run:
+
+```bash
+python generate.py
+```
+
+The generated molecules will be saved as:
+
+```text
+generated_smiles_with_MP-LSTM.csv
+```
 
 ## 📄 Publication
 
