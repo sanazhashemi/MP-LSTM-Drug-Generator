@@ -28,10 +28,27 @@ The model is trained on a dataset of known molecules and is capable of generatin
 3. Run the molecule generation script:
     python generate.py
 
+## 📄 Publication
+
+This repository contains the implementation of the MP-LSTM model described in the following paper:
+
+**Generating Pharmaceutical Molecules Using Multi-Path Deep Learning**
+
+Sanaz Hashemipour, Habib Izadkhah, and Abolfazl Barzegar.  
+DOI: https://doi.org/10.1109/IICAI70155.2026.11620965
   
 ## 📄 Citation
-This repository is associated with a research article currently under peer review. Citation information will be provided here upon publication.
-
+If you use this code or the MP-LSTM model in your research, please cite:
+```bibtex
+@inproceedings{11620965,
+  author={Hashemipour, Sanaz and Izadkhah, Habib and Barzegar, Abolfazl},
+  booktitle={2026 International Interdisciplinary Conference on Artificial Intelligence: Engineering, Health, Finance and Humanities (IICAI)},
+  title={Generating Pharmaceutical Molecules Using Multi-Path Deep Learning},
+  year={2026},
+  pages={1-6},
+  doi={10.1109/IICAI70155.2026.11620965}
+}
+```
 ---
 
 ## 📬 Contact
